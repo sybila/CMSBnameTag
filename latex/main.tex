@@ -1,5 +1,5 @@
 \documentclass[letterpaper,10pt]{article}
-
+\usepackage[utf8]{inputenc}
 %% To include CJK character, one needs to use xelatex to compile
 %% and also to have a CJK font installed (current set to `Noto Sans CJK TC`)
 %% Otherwise, comment out the following two lines.  
@@ -30,32 +30,32 @@
 \newcommand*{\cbox}[1]{\makebox[0pt]{\maxsizebox{3.8in}{!}{#1}}}
 \newcommand*{\lbox}[1]{\makebox[0pt][l]{\maxsizebox{3.8in}{!}{#1}}}
 \newcommand*{\rbox}[1]{\makebox[0pt][r]{\maxsizebox{3.8in}{!}{#1}}}
-\newcommand*{\largefont}{\fontsize{68pt}{0pt}\selectfont}
-\newcommand*{\smallfont}{\fontsize{26pt}{0pt}\selectfont}
-\newcommand*{\infofont}{\fontsize{22pt}{0pt}\selectfont}
+\newcommand*{\namefont}{\fontsize{24pt}{0pt}\selectfont}
+\newcommand*{\affiliationFont}{\fontsize{18pt}{0pt}\selectfont}
 
 %% page setting, currently set to match Avery Name Badges #74459
-\hoffset=-0.75in %adjusting page margin
-\voffset=-0.125in %adjusting page margin 
+\hoffset=-0.25in %adjusting page margin %0.41
+\voffset=-0.5in %adjusting page margin 
 \unitlength=0.01in
-\ticketSize{400}{300} % in unitlength
+\ticketSize{365.8}{236} % in unitlength
 \ticketDistance{0}{0} %in unitlength
-\ticketNumbers{2}{3} % how many badges per page
+\ticketNumbers{2}{4} % how many badges per page
 
 %% ticket default setting
 \renewcommand*{\ticketdefault}{%
-  \put(10,2){\lbox{\includegraphics[width=1in]{desc-logo}}}%
-  \put(380,14){\rbox{\includegraphics[width=0.7in]{lsstc-logo}}}%
-  \put(205,29){\cbox{\latinfont\scriptsize Collaboration Meeting, Feb.~5--9, 2018}}% 
-  \put(205,15){\cbox{\latinfont\scriptsize SLAC National Accelerator Laboratory}}%
+  \put(20,2){\lbox{\includegraphics[width=1.1in]{cmsb2}}}%
+  %\put(380,14){\rbox{\includegraphics[width=0.7in]{lsstc-logo}}}%
+  \put(180,220){\cbox{\latinfont\small 16th International Conference on }}%
+  \put(180,205){\cbox{\latinfont\small Computational Methods in Systems Biology}}%  
+  \put(240,35){\cbox{\latinfont\small 12th-14th September 2018}}% 
+  \put(240,20){\cbox{\latinfont\small Faculty of Informatics, Brno}}%
 }
 
 %% participant style setting
-\newcommand*{\participant}[5]{\ticket{%
-  \put(200,210){\cbox{#5{\latinfont\bfseries\largefont #1}}}%
-  \put(200,155){\cbox{#5{\latinfont\bfseries\smallfont #2}}}%
-  \put(200,106){\cbox{\latinfont\infofont #3}}%
-  \put(200,62){\cbox{\latinfont\itshape\infofont #4}}%
+\newcommand*{\participant}[4]{\ticket{%
+  \put(180,155){\cbox{#4{\latinfont\bfseries\namefont #1}}}%
+  \put(180,115){\cbox{\latinfont\affiliationFont #2}}%
+  \put(180,85){\cbox{\latinfont\affiliationFont #3}}%
 }}
 
 %% empty ticket (with background)
@@ -68,17 +68,25 @@
 %\hoffset=1.1in
 %\backside
 
+\usepackage{csvsimple}
+
 
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % insert below the participant list
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\participant{Large-font Name}{Small-font Name}{Affiliation}{Pronoun}{}
-\participant{Uhura}{Nyota Uhura}{Starfleet}{she/human}{}
+\participant{Large-font Name}{Affiliation}{Azerbajdžan}{}
+\participant{Uhura}{Starfleet}{USA}{}
 \emptyticket{}
-\participant{Jim}{Kirk}{Starfleet}{he}{\local}
-\participant{Bones}{Leonard McCoy}{Starfleet}{he/Doctor}{}
+\participant{Jim}{Starfleet}{here}{\local}
+\participant{Bones}{Starfleet}{there}{}
 \emptyticket{}
+\participant{Large-font Name}{Affiliation}{nowehre}{}
+\participant{Uhura Loïc}{Starfleet}{}{}
+
+%\csvreader[head to column names]{stav_reg.csv}{}% use head of csv as column names
+%    {\participant{\name \surname}{\affiliace}}{}% specify your coloumns here
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % end of the participant list
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
