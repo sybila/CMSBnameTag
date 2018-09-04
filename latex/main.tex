@@ -19,6 +19,8 @@
 \usepackage{graphicx} % provides \includegraphics
 \usepackage{adjustbox} % provides \maxsizebox 
 
+\usepackage{mdframed}
+
 %% to use colored text for highlighting
 \newcommand*{\highlight}{\textcolor}
 %% OR, to use contour for highlighting, uncomment below
@@ -31,7 +33,7 @@
 \newcommand*{\lbox}[1]{\makebox[0pt][l]{\maxsizebox{3.8in}{!}{#1}}}
 \newcommand*{\rbox}[1]{\makebox[0pt][r]{\maxsizebox{3.8in}{!}{#1}}}
 \newcommand*{\namefont}{\fontsize{24pt}{0pt}\selectfont}
-\newcommand*{\affiliationFont}{\fontsize{18pt}{0pt}\selectfont}
+\newcommand*{\affiliationFont}{\fontsize{16pt}{0pt}\selectfont}
 
 %% page setting, currently set to match Avery Name Badges #74459
 \hoffset=-0.25in %adjusting page margin %0.41
@@ -53,16 +55,14 @@
 
 %% participant style setting
 \newcommand*{\participant}[4]{\ticket{%
-  \put(180,155){\cbox{#4{\latinfont\bfseries\namefont #1}}}%
-  \put(180,115){\cbox{\latinfont\affiliationFont #2}}%
-  \put(180,85){\cbox{\latinfont\affiliationFont #3}}%
+  \put(180,155){\cbox{\latinfont\bfseries\namefont #1}}%
+  \put(180,110){\cbox{\latinfont\affiliationFont #2}}%
+  \put(180,80){\cbox{\latinfont\affiliationFont #3}}%
+  \put(335,205){\lbox{\includegraphics[width=0.22in]{#4}}}
 }}
 
 %% empty ticket (with background)
 \newcommand*{\emptyticket}{\ticket{}}
-
-%% local people or other highlight commands
-\newcommand*{\local}{\highlight{orange}}
 
 %% backside printing (comment out for front side)
 %\hoffset=1.1in
@@ -70,19 +70,31 @@
 
 \usepackage{csvsimple}
 
-
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % insert below the participant list
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\participant{Large-font Name}{Affiliation}{Azerbajdžan}{}
-\participant{Uhura}{Starfleet}{USA}{}
+
+\pagecolor{yellow!50} % for organisers
+\participant{Large-font Name}{Affiliation}{Azerbajdžan}{empty}
+\participant{Uhura}{Starfleet}{USA}{dinner}
 \emptyticket{}
-\participant{Jim}{Starfleet}{here}{\local}
-\participant{Bones}{Starfleet}{there}{}
+\participant{Jim}{Starfleet}{here}{broccoli}
+\participant{Bones}{Starfleet}{there}{broccoli}
 \emptyticket{}
-\participant{Large-font Name}{Affiliation}{nowehre}{}
-\participant{Uhura Loïc}{Starfleet}{}{}
+\participant{Large-font Name}{Affiliation}{nowehre}{broccoli}
+\participant{Uhura Loïc}{Starfleet}{}{dinner}
+
+\nopagecolor
+
+\participant{Large-font Name}{Affiliation}{Azerbajdžan}{dinner}
+\participant{Uhura}{Starfleet}{USA}{dinner}
+\emptyticket{}
+\participant{Jim}{Starfleet}{here}{dinner}
+\participant{Bones}{Starfleet}{there}{empty}
+\emptyticket{}
+\participant{Large-font Name}{Affiliation}{nowehre}{dinner}
+\participant{Uhura Loïc}{Starfleet}{}{dinner}
 
 %\csvreader[head to column names]{stav_reg.csv}{}% use head of csv as column names
 %    {\participant{\name \surname}{\affiliace}}{}% specify your coloumns here
@@ -91,6 +103,6 @@
 % end of the participant list
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % empty tickets below
-%\emptyticket{}
-%\emptyticket{}
+\emptyticket{}
+\emptyticket{}
 \end{document}
