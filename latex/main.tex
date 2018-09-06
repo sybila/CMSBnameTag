@@ -33,7 +33,8 @@
 \newcommand*{\lbox}[1]{\makebox[0pt][l]{\maxsizebox{3.8in}{!}{#1}}}
 \newcommand*{\rbox}[1]{\makebox[0pt][r]{\maxsizebox{3.8in}{!}{#1}}}
 \newcommand*{\namefont}{\fontsize{24pt}{0pt}\selectfont}
-\newcommand*{\affiliationFont}{\fontsize{16pt}{0pt}\selectfont}
+\newcommand*{\affiliationFont}{\fontsize{12pt}{0pt}\selectfont}
+\newcommand*{\countryFont}{\fontsize{11pt}{0pt}\selectfont}
 
 %% page setting, currently set to match Avery Name Badges #74459
 \hoffset=-0.25in %adjusting page margin %0.41
@@ -54,11 +55,12 @@
 }
 
 %% participant style setting
-\newcommand*{\participant}[4]{\ticket{%
-  \put(180,155){\cbox{\latinfont\bfseries\namefont #1}}%
-  \put(180,110){\cbox{\latinfont\affiliationFont #2}}%
-  \put(180,80){\cbox{\latinfont\affiliationFont #3}}%
-  \put(335,205){\lbox{\includegraphics[width=0.22in]{#4}}}
+\newcommand*{\participant}[6]{\ticket{%
+  \put(180,155){\cbox{\latinfont\bfseries\namefont #1 #2}}%
+  \put(180,125){\cbox{\latinfont\countryFont #3}}%
+  \put(180,100){\cbox{\latinfont\affiliationFont #4}}%
+  \put(180,75){\cbox{\latinfont\countryFont #5}}%
+  \put(335,205){\lbox{\includegraphics[width=0.22in]{#6}}}
 }}
 
 %% empty ticket (with background)
@@ -75,34 +77,95 @@
 % insert below the participant list
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\pagecolor{yellow!50} % for organisers
-\participant{Large-font Name}{Affiliation}{Azerbajdžan}{empty}
-\participant{Uhura}{Starfleet}{USA}{dinner}
+\participant{Elife}{Bagci}{Biology Department}{Namik Kemal University}{Turkey}{dinner}
+\participant{Pavol}{Bokes}{}{Comenius University in Bratislava}{Slovakia}{dinner}
+\participant{Pierre}{Boutillier}{}{Harvard Medical School}{United States}{dinner}
+\participant{Marcin}{Choiński}{}{University of Warsaw}{Poland}{dinner}
+\participant{François}{Fages}{Salcay}{INRIA}{France}{dinner}
+\participant{Jérôme}{Feret}{}{INRIA}{France}{dinner}
+\participant{Christoph}{Flamm}{}{University of Vienna}{Austria}{dinner}
+\participant{Veronika}{Hajnová}{Faculty of Science}{Masaryk University}{Czech Republic}{dinner}
+\participant{Adam}{Halasz}{}{West Virginia University}{United States}{dinner}
+\participant{Jonathan}{Laurent}{}{Carnegie Mellon University}{United States}{dinner}
+\participant{Samuel}{Oliveira}{BioMediTech Institute}{Tampere University of Technology}{Finland}{dinner}
+\participant{Soumya}{Paul}{}{University of Luxembourg}{Luxembourg}{dinner}
+\participant{Anna}{Poskrobko}{}{Bialystok University of Technology}{Poland}{dinner}
+\participant{Misbah}{Razzaq}{}{LS2N UNIVERSITE DE NANTES}{France}{dinner}
+\participant{Jeremy}{Revell}{}{Newcastle University}{United Kingdom}{dinner}
+\participant{Leonard}{Schmiester}{Institute of Computational Biology}{Helmholtz Zentrum München}{Germany}{dinner}
+\participant{Cui}{Su}{}{University of Luxembourg}{Luxembourg}{dinner}
+\participant{Carolyn}{Talcott}{}{SRI International}{United States}{dinner}
+\participant{Jan}{Van Schuppen}{}{Van Schuppen Control Research}{Netherlands}{dinner}
+\participant{Pia}{Wilsdorf}{}{University of Rostock}{Germany}{dinner}
+\participant{Thomas}{Wright}{}{University of Edinburgh}{United Kingdom}{dinner}
+\participant{Maja}{Zagorščak}{}{National Institute of Biology}{Slovenia}{dinner}
+\participant{Niels}{Kornerup}{}{University of Texas at Austin}{United States}{dinner}
+\participant{Boyan}{Yordanov}{}{Microsoft Research}{United Kingdom}{dinner}
+\participant{Luca}{Bortolussi}{}{University of Trieste}{Italy}{dinner}
+\participant{Keenan}{Breik}{}{University of Texas at Austin}{United State }{dinner}
+\participant{Ashutosh}{Gupta}{}{IIT Bombay}{India}{dinner}
+\participant{Jiří}{Jablonský}{}{University of South Bohemia}{Czech Republic}{dinner}
+\participant{Jan}{Hasenauer}{}{Helmholtz Zentrum Muenchen}{Germany}{dinner}
+\participant{Taisa}{Kushner}{}{University of Colorado - Boulder}{United}{dinner}
+\participant{Igor}{Schreiber}{}{University of Chemistry and Technology}{Czech Republic}{dinner}
+\participant{Loïc}{Paulevé}{CNRS / LRI}{University Paris-Saclay}{France}{dinner}
+\participant{C. Donald}{Combs}{}{EVMS}{United States}{dinner}
+\participant{Martin}{Modrák}{}{Institute of Microbiology of the CAS}{Czech Republic}{dinner}
+\participant{Leila}{Ghanbar}{}{Brunel University London}{United Kingdom}{dinner}
+\participant{Golestan}{Radwan}{}{Royal Holloway University of London}{United Kingdom}{dinner}
+\participant{David}{Gilbert}{}{Brunel University London}{United Kingdom}{dinner}
+\participant{Monika}{Heiner}{}{Brandenburg Technical University}{Germany}{dinner}
+\participant{Michael J.}{Wester}{STMC and}{Department of Mathematics and Statistics}{United States}{dinner}
+\participant{Ankit Kumar}{Shukla}{}{TIFR Mumbai}{India}{dinner}
+\participant{Tatjana}{Petrov}{}{University of Konstanz}{Germany}{dinner}
+\participant{Vuk}{Radojković}{}{University of Chemistry and Technology}{Prague, Czech Republic}{empty}
+\participant{Lenka}{Schreiberová}{}{University of Chemistry and Technology}{Prague, Czech Republic}{empty}
+\participant{Natacha}{Simic}{}{}{France}{dinner}
+\participant{František}{Muzika}{}{University of Chemistry and Technology}{Prague, Czech Republic}{dinner}
+\participant{Luca}{Laurenti}{}{University of Oxford}{United Kingdom}{dinner}
+% locals
+\participant{Matej}{Lexa}{Faculty of Informatics}{Masaryk University}{Czech Republic}{empty}
+\participant{Lenka}{Přibylová}{Faculty of Science}{Masaryk University}{Czech Republic}{empty}
+\participant{Barbora}{Losová}{Faculty of Science}{Masaryk University}{Czech Republic}{empty}
+\participant{Luboš}{Brim}{Faculty of Informatics}{Masaryk University}{Czech Republic}{dinner}
+\participant{Mojmír}{Křetínský}{Faculty of Science}{Masaryk University}{Czech Republic}{empty}
+\participant{Jiří}{Barnat}{Faculty of Science}{Masaryk University}{Czech Republic}{empty}
+\participant{Jiří}{Zlatuška}{Faculty of Science}{Masaryk University}{Czech Republic}{empty}
+\participant{Ivana}{Černá}{Faculty of Science}{Masaryk University}{Czech Republic}{empty}
+\participant{Nikola}{Beneš}{Faculty of Science}{Masaryk University}{Czech Republic}{empty}
+\participant{Jan}{Obdržálek}{Faculty of Science}{Masaryk University}{Czech Republic}{dinner}
+\participant{Jan}{Červený}{}{CzechGlobe}{Czech Republic}{empty}
+% invited
+\participant{Andrew}{Phillips}{}{Microsoft Research}{United Kingdom}{dinner}
+\participant{Mustafa}{Khammash}{}{ETH Zurich}{Switzerland}{dinner}
+\participant{Ilka M.}{Axmann}{}{Heinrich Heine University Düsseldorf}{Germany}{dinner}
+\participant{Chris J.}{Myers}{}{University of Utah}{United States}{dinner}
+\participant{Andrew}{Turberfield}{}{University of Oxford}{United Kingdom}{dinner}
+% organisers
 \emptyticket{}
-\participant{Jim}{Starfleet}{here}{broccoli}
-\participant{Bones}{Starfleet}{there}{broccoli}
 \emptyticket{}
-\participant{Large-font Name}{Affiliation}{nowehre}{broccoli}
-\participant{Uhura Loïc}{Starfleet}{}{dinner}
-
+\pagecolor{yellow!50} 
+\participant{Samuel}{Pastva}{Faculty of Informatics}{Masaryk University}{Czech Republic}{dinner}
+\participant{Martin}{Demko}{Faculty of Informatics}{Masaryk University}{Czech Republic}{dinner}
+\participant{Matej}{Hajnal}{Faculty of Informatics}{Masaryk University}{Czech Republic}{dinner}
+\participant{Katarína}{Palubová}{Faculty of Informatics}{Masaryk University}{Czech Republic}{dinner}
+\participant{Lukrécia}{Mertová}{Faculty of Informatics}{Masaryk University}{Czech Republic}{dinner}
+\participant{Marek}{Havlík}{Faculty of Informatics}{Masaryk University}{Czech Republic}{dinner}
+\participant{Matej}{Troják}{Faculty of Informatics}{Masaryk University}{Czech Republic}{dinner}
+\participant{Milan}{Češka}{Faculty of Informatics}{Masaryk University}{Czech Republic}{dinner}
+\pagecolor{yellow!50} 
+\participant{David}{Šafránek}{Faculty of Informatics}{Masaryk University}{Czech Republic}{dinner}
+\newpage
 \nopagecolor
-
-\participant{Large-font Name}{Affiliation}{Azerbajdžan}{dinner}
-\participant{Uhura}{Starfleet}{USA}{dinner}
-\emptyticket{}
-\participant{Jim}{Starfleet}{here}{dinner}
-\participant{Bones}{Starfleet}{there}{empty}
-\emptyticket{}
-\participant{Large-font Name}{Affiliation}{nowehre}{dinner}
-\participant{Uhura Loïc}{Starfleet}{}{dinner}
-
-%\csvreader[head to column names]{stav_reg.csv}{}% use head of csv as column names
-%    {\participant{\name \surname}{\affiliace}}{}% specify your coloumns here
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % end of the participant list
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % empty tickets below
+\emptyticket{}
+\emptyticket{}
+\emptyticket{}
+\emptyticket{}
+\emptyticket{}
 \emptyticket{}
 \emptyticket{}
 \end{document}

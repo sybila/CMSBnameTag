@@ -2,7 +2,6 @@
 \participant{Pavol}{Bokes}{Comenius University in Bratislava}{Slovakia}{dinner}
 \participant{Pierre}{Boutillier}{Harvard Medical School}{United States}{dinner}
 \participant{Marcin}{Choiński}{University of Warsaw}{Poland}{dinner}
-\participant{Antoni}{Dawidowicz}{Jagiellonian University}{Poland}{dinner}
 \participant{François}{Fages}{INRIA SACLAY ILE DE FRANCE}{France}{dinner}
 \participant{Jérôme}{Feret}{INRIA}{France}{dinner}
 \participant{Christoph}{Flamm}{University of Vienna}{Austria}{dinner}
@@ -37,18 +36,26 @@
 \participant{Golestan}{Radwan}{Royal Holloway University of London}{United Kingdom}{dinner}
 \participant{David}{Gilbert}{Brunel University London}{United Kingdom}{dinner}
 \participant{Monika}{Heiner}{Brandenburg Technical University}{Germany}{dinner}
-\participant{Michael J.}{Wester}{STMC and Department of Mathematics and Statistics}{United States }{dinner}
+\participant{Michael J.}{Wester}{STMC and Department of Mathematics and Statistics}{United States}{dinner}
 \participant{Ankit Kumar}{Shukla}{TIFR Mumbai}{India}{dinner}
 \participant{Tatjana}{Petrov}{University of Konstanz}{Germany}{dinner}
-\participant{Vuk}{Radojković}{University of Chemistry and Technology Prague}{Czech Republic}{dinner}
-\participant{Lenka}{Schreiberová}{University of Chemistry and Technology Prague}{}{dinner}
+\participant{Vuk}{Radojković}{University of Chemistry and Technology Prague}{Czech Republic}{empty}
+\participant{Lenka}{Schreiberová}{University of Chemistry and Technology Prague}{Czech Republic}{empty}
 \participant{Natacha}{Simic}{}{France}{dinner}
 \participant{František}{Muzika}{VŠCHT Praha}{Czech Republic}{dinner}
-
-\participant{Matej}{Lexa}{Faculty of Informatics, Masaryk University}{Czech Republic}{empty}
 \participant{Luca}{Laurenti}{University of Oxford}{United Kingdom}{dinner}
+
+% locals
+\participant{Matej}{Lexa}{Faculty of Informatics, Masaryk University}{Czech Republic}{empty}
 \participant{Lenka}{Přibylová}{Faculty of Science, Masaryk University}{Czech Republic}{empty}
 \participant{Barbora}{Losová}{Faculty of Science, Masaryk University}{Czech Republic}{empty}
+\participant{Luboš}{Brim}{Faculty of Informatics, Masaryk University}{Czech Republic}{dinner}
+\participant{Mojmír}{Křetínský}{Faculty of Science, Masaryk University}{Czech Republic}{empty}
+\participant{Jiří}{Barnat}{Faculty of Science, Masaryk University}{Czech Republic}{empty}
+\participant{Jiří}{Zlatuška}{Faculty of Science, Masaryk University}{Czech Republic}{empty}
+\participant{Ivana}{Černá}{Faculty of Science, Masaryk University}{Czech Republic}{empty}
+\participant{Nikola}{Beneš}{Faculty of Science, Masaryk University}{Czech Republic}{empty}
+\participant{Jan}{Obdržálek}{Faculty of Science, Masaryk University}{Czech Republic}{dinner}
 
 % invited
 \participant{Andrew}{Phillips}{Microsoft Research}{United Kingdom}{dinner}
@@ -57,7 +64,8 @@
 \participant{Chris J.}{Myers}{University of Utah}{United States}{dinner}
 \participant{Andrew}{Turberfield}{University of Oxford}{United Kingdom}{dinner}
 
-\pagecolor{yellow!50} % for organisers
+% organisers
+\pagecolor{yellow!50} 
 \participant{Samuel}{Pastva}{Faculty of Informatics, Masaryk University}{Czech Republic}{dinner}
 \participant{Martin}{Demko}{Faculty of Informatics, Masaryk University}{Czech Republic}{dinner}
 \participant{Matej}{Hajnal}{Faculty of Informatics, Masaryk University}{Czech Republic}{dinner}
@@ -65,8 +73,6 @@
 \participant{Lukrécia}{Mertová}{Faculty of Informatics, Masaryk University}{Czech Republic}{dinner}
 \participant{Marek}{Havlík}{Faculty of Informatics, Masaryk University}{Czech Republic}{dinner}
 \participant{Matej}{Troják}{Faculty of Informatics, Masaryk University}{Czech Republic}{dinner}
-\participant{Luboš}{Brim}{Faculty of Informatics, Masaryk University}{Czech Republic}{dinner}
 \participant{Milan}{Češka}{Faculty of Informatics, Masaryk University}{Czech Republic}{dinner}
 \participant{Jan}{Červený}{CzechGlobe}{Czech Republic}{dinner}
 \participant{David}{Šafránek}{Faculty of Informatics, Masaryk University}{Czech Republic}{dinner}
-
