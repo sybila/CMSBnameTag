@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage[paper=letterpaper,layoutwidth=8.5in,layoutheight=7in]{geometry}% this says the paper is letterpaper but the layout should be 8.5x7
+\usepackage[newdimens]{labels}% let the package do the work...
+\LabelCols=3
+\LabelRows=10
+\LeftPageMargin=0.75in
+\RightPageMargin=0.75in
+\TopPageMargin=1in
+\BottomPageMargin=1in
+\InterLabelColumn=0mm% adjust as required
+\InterLabelRow=0mm
+\RightLabelBorder=5mm% adjust to taste
+\LeftLabelBorder=5mm
+\TopLabelBorder=5mm
+\BottomLabelBorder=5mm
+
+\LabelGridtrue %turn on to line stuff up; off to process final version
+\numberoflabels=60% set to 1 when you fill in the individual labels - this will just repeat 1 instance 20 times to show the layout.
+
+\begin{document}
+
+\genericlabel{%
+        \begin{minipage}{3.25in}% adjust as desired
+          \textbf{Wi-Fi network}: wlan\_fi
+
+          https://wifi.fi.muni.cz/
+
+          User: wifi02
+
+          Password: zopudubyjo
+        \end{minipage}
+}
+
+\end{document}
